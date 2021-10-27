@@ -105,7 +105,7 @@ int perro_Estadia_Fecha_cargarUno(eEstadiaDiaria estadias[],int j,ePerro perros[
 
 	pedirEntero(&estadias[j].fecha.dia, "Ingrese el dia de su estadia:  ", "Ingrese un numero valido (1-30): ", 1, 30);
 	pedirEntero(&estadias[j].fecha.mes, "Ingrese el mes de su estadia:  ", "Ingrese un numero valido (1-12): ", 1, 12);
-	pedirEntero(&estadias[j].fecha.anio, "Ingrese el año de su estadia:  ", "Ingrese un numero valido (2020-2030): ", 2020, 2030);
+	pedirEntero(&estadias[j].fecha.anio, "Ingrese el año de su estadia:  ", "Ingrese un numero valido (2021-2030): ", 2021, 2030);
 
 	indexDuenio=duenio_buscarPorId(duenios, tam, estadias[j].idDuenio);
 	//estadia_mostrarUno(estadias[j]);

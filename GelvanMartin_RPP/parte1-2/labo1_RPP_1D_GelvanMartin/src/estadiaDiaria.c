@@ -31,7 +31,7 @@ void estadia_hardCodearEstadia(eEstadiaDiaria estadias[], int tam)
 	int idDuenio[] = {30000, 30001, 30002};
 	int fechaDia[]= {1,13,4};
 	int fechaMes[]= {4,11,2};
-	int fechaAnio[]={2020,2030,2021};
+	int fechaAnio[]={2023,2030,2021};
 
 	for (i = 0; i < 3; i++) {
 		estadias[i].id = id[i];
