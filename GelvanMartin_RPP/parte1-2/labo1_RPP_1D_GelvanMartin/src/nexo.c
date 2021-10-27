@@ -76,6 +76,7 @@ void estadia_duenio_mostrarTodos(eEstadiaDiaria estadias[], int tam, eDuenio due
 int perro_Estadia_Fecha_cargarUno(eEstadiaDiaria estadias[],int j,ePerro perros[], int i,eFecha fechas[],int k,int ultimoId, int tam,eDuenio duenios[])
 {
 	int retorno = -1;
+	int indexDuenio;
 	 //int idDuenio;
 
 
@@ -106,7 +107,12 @@ int perro_Estadia_Fecha_cargarUno(eEstadiaDiaria estadias[],int j,ePerro perros[
 	pedirEntero(&estadias[j].fecha.mes, "Ingrese el mes de su estadia:  ", "Ingrese un numero valido (1-12): ", 1, 12);
 	pedirEntero(&estadias[j].fecha.anio, "Ingrese el año de su estadia:  ", "Ingrese un numero valido (2020-2030): ", 2020, 2030);
 
-	estadia_mostrarUno(estadias[j]);
+	indexDuenio=duenio_buscarPorId(duenios, tam, estadias[j].idDuenio);
+	//estadia_mostrarUno(estadias[j]);
+	if(estadias[j].idDuenio==duenios[indexDuenio].id)
+	{
+		estadia_duenio_mostrarUno(estadias[j],duenios[indexDuenio]);
+	}
 
 
 	if(pedirConfirmacion("\nIngrese 's' para confirmar el alta de la estadia: ")==0)
